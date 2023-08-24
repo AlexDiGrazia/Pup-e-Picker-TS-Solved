@@ -139,6 +139,41 @@
       "description": "The gangsta doggie",
       "isFavorite": true,
       "id": 20
+    },
+    {
+      "name": "Dog",
+      "image": "/assets/corgi.png",
+      "description": "hound",
+      "isFavorite": false,
+      "id": 22
+    },
+    {
+      "name": "Rick Astley",
+      "image": "/assets/boxer.jpeg",
+      "description": "Never Gonna give you up",
+      "isFavorite": false,
+      "id": 23
+    },
+    {
+      "name": "Donatello",
+      "image": "/assets/blue-heeler.png",
+      "description": "Teenage Mutant Ninja Doggy!  Brow now now now now now nooooooowww!!!",
+      "isFavorite": false,
+      "id": 24
+    },
+    {
+      "name": "My Pet Monster",
+      "image": "/assets/chihuahua.avif",
+      "description": "A Monster of a Friend",
+      "isFavorite": false,
+      "id": 25
+    },
+    {
+      "name": "Da Newest Doggo",
+      "image": "/assets/corgi.png",
+      "description": "I is the newest Doggo on the block, please feed me treats :) ",
+      "isFavorite": false,
+      "id": 26
     }
   ]
 }

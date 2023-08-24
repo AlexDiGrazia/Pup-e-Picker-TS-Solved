@@ -117,7 +117,7 @@ You should use conditional rendering to show different components inside of the 
 
 ## Interacting With the API
 
-- [] When the component loads, you should fetch all of the dogs from the server and store them in state
+- [x] When the component loads, you should fetch all of the dogs from the server and store them in state
 - [] When you click on a gray heart, it should turn red and the dog's `isFavorite` property should be set to `true` in the database
 - [] When you click on a red heart, it should turn gray and the dog's `isFavorite` property should be set to `false` in the database
 - [] When you click on the trash icon, it should delete the dog from the database and show the updated list of dogs
@@ -126,8 +126,8 @@ You should use conditional rendering to show different components inside of the 
 ## Organizing your fetch calls
 
 - [] You should have a file called `api.ts` with a request object that contains all of your fetching functions
-- [] These can and should be shared to both your class components and your functional components as needed
-- [] `getAllDogs` should return a promise that resolves to an array of all the dogs in the database
+- [x] These can and should be shared to both your class components and your functional components as needed
+- [x] `getAllDogs` should return a promise that resolves to an array of all the dogs in the database
 - [] `postDog` should take in a partial dog object, and return a promise that resolves to the dog object that was created
   - Note: Don't provide an id with the body of your request, the server will create an id for you
 - [] `updateDog` should take in a partial dog object, and return a promise that resolves to the dog object that was modified
