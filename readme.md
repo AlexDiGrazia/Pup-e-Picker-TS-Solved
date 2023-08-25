@@ -94,18 +94,18 @@ You should use conditional rendering to show different components inside of the 
 
 ### when the `favorited` tab is active
 
-- [] shows the `(Functional | Class)Dogs` component
-- [] the dogs we can see should be ONLY THE DOGS WHERE `isFavorite` IS TRUE
+- [x] shows the `(Functional | Class)Dogs` component
+- [x] the dogs we can see should be ONLY THE DOGS WHERE `isFavorite` IS TRUE
 
 ### when the `unfavorited` tab is active
 
-- [] should show the `Dogs` component
-- [] the selected dogs should be ONLY THE DOGS WHERE `isFavorite` IS FALSE
+- [x] should show the `Dogs` component
+- [x] the selected dogs should be ONLY THE DOGS WHERE `isFavorite` IS FALSE
 
 ### when the create dog tab is active
 
-- [] should show the `Dogs` component
-- [] the selected dogs should be ONLY THE DOGS WHERE `isFavorite` IS FALSE
+- [x] should show the `Dogs` component
+- [x] the selected dogs should be ONLY THE DOGS WHERE `isFavorite` IS FALSE
 
 ### Tabs
 
@@ -125,13 +125,13 @@ You should use conditional rendering to show different components inside of the 
 
 ## Organizing your fetch calls
 
-- [] You should have a file called `api.ts` with a request object that contains all of your fetching functions
+- [x] You should have a file called `api.ts` with a request object that contains all of your fetching functions
 - [x] These can and should be shared to both your class components and your functional components as needed
 - [x] `getAllDogs` should return a promise that resolves to an array of all the dogs in the database
-- [] `postDog` should take in a partial dog object, and return a promise that resolves to the dog object that was created
+- [x] `postDog` should take in a partial dog object, and return a promise that resolves to the dog object that was created
   - Note: Don't provide an id with the body of your request, the server will create an id for you
-- [] `updateDog` should take in a partial dog object, and return a promise that resolves to the dog object that was modified
-- [] `delete` should take in a number, delete the dog with that id, and return a promise
+- [x] `updateDog` should take in a partial dog object, and return a promise that resolves to the dog object that was modified
+- [x] `delete` should take in a number, delete the dog with that id, and return a promise
 
 - We STRONGLY recommend you TEST these functions before you stress out about actually using them
 - For example, MAKE SURE `getAllDogs` works before trying to use it in your components to render things on the page
@@ -159,7 +159,7 @@ If the data is still loading then...
 
 - [x] When you submit the form, it should create a new dog in the database
 - [x] If you navigate to the `all` tab, you should see the new dog in the list of dogs
-- [] If you navigate to the `favorited` tab, you should NOT see the new dog in the list of dogs
-- [] If you navigate to the `unfavorited` tab, you should see the new dog in the list of dogs
+- [x] If you navigate to the `favorited` tab, you should NOT see the new dog in the list of dogs
+- [x] If you navigate to the `unfavorited` tab, you should see the new dog in the list of dogs
 - [x] After the submission the form should be cleared, and the select should return to the default
 - [] After submitting a toast notification from `react-hot-toast` should appear saying "Dog Created"

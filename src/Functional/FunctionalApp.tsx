@@ -25,7 +25,9 @@ export function FunctionalApp() {
             display={display}
           />
         )}
-        {display === "form" && <FunctionalCreateDogForm />}
+        {display === "form" && (
+          <FunctionalCreateDogForm setAllDogs={setAllDogs} />
+        )}
       </FunctionalSection>
     </div>
   );

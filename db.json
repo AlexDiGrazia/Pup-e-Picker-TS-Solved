@@ -39,7 +39,7 @@
       "name": "Lilla",
       "image": "/assets/boxer.png",
       "description": "Diesel um online Human circuit wireless generation Infrastructure",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 12
     },
     {
@@ -74,7 +74,7 @@
       "name": "Patsy",
       "image": "/assets/chihuahua.avif",
       "description": "Diesel Sudanese West Fantastic Car green Ben Via",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 18
     },
     {
@@ -83,6 +83,48 @@
       "description": "Card Ergonomic qua Chance transform keenly payment",
       "isFavorite": true,
       "id": 19
+    },
+    {
+      "name": "Lilah",
+      "image": "/assets/chihuahua.avif",
+      "description": "The pretty pooch",
+      "isFavorite": false,
+      "id": 20
+    },
+    {
+      "name": "not this ti9me",
+      "image": "/assets/blue-heeler.png",
+      "description": "no",
+      "isFavorite": false,
+      "id": 21
+    },
+    {
+      "name": "Will it add",
+      "image": "/assets/blue-heeler.png",
+      "description": "to the unFavorited collection total?",
+      "isFavorite": false,
+      "id": 22
+    },
+    {
+      "name": "Two",
+      "image": "/assets/corgi.png",
+      "description": "to make it true",
+      "isFavorite": false,
+      "id": 23
+    },
+    {
+      "name": "Never to many tests",
+      "image": "/assets/boxer.jpeg",
+      "description": "To see if the behavior will be consistent",
+      "isFavorite": false,
+      "id": 24
+    },
+    {
+      "name": "doggo",
+      "image": "/assets/blue-heeler.png",
+      "description": "the greatest",
+      "isFavorite": false,
+      "id": 25
     }
   ]
 }

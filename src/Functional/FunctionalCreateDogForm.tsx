@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { dogPictures } from "../dog-pictures";
 import { Requests } from "../api";
+import { Dog } from "../types";
 
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
-export const FunctionalCreateDogForm = () => {
+export const FunctionalCreateDogForm = ({
+  setAllDogs,
+}: {
+  setAllDogs: Dispatch<SetStateAction<Dog[]>>;
+}) => {
   const [nameInput, setNameInput] = useState<string>("");
   const [descriptionInput, setDescriptionInput] = useState<string>("");
   const [imageInput, setImageInput] = useState<string>(defaultSelectedImage);
@@ -20,7 +25,8 @@ export const FunctionalCreateDogForm = () => {
           image: imageInput,
           description: descriptionInput,
           isFavorite: false,
-        });
+        }).then(() => Requests.getAllDogs().then(setAllDogs));
+
         setNameInput("");
         setDescriptionInput("");
         setImageInput(defaultSelectedImage);
