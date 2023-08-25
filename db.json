@@ -1,60 +1,137 @@
 {
   "dogs": [
     {
-      "name": "April",
-      "image": "/assets/corgi.png",
-      "description": "Electric portals Oganesson Beauty Producer",
+      "name": "Milan",
+      "image": "/assets/chihuahua.avif",
+      "description": "Implementation Diesel verb Optimization Human",
       "isFavorite": false,
+      "id": 0
+    },
+    {
+      "name": "Salma",
+      "image": "/assets/blue-heeler.png",
+      "description": "efficient Iron disintermediate Bicycle Trial until boo Salad",
+      "isFavorite": false,
+      "id": 2
+    },
+    {
+      "name": "Jacynthe",
+      "image": "/assets/corgi.png",
+      "description": "calculating Tesla Steel flash Celsius",
+      "isFavorite": false,
+      "id": 3
+    },
+    {
+      "name": "Chelsea",
+      "image": "/assets/chihuahua.avif",
+      "description": "until pucker soot Associate relationships maroon Orchestrator",
+      "isFavorite": true,
+      "id": 4
+    },
+    {
+      "name": "Brain",
+      "image": "/assets/dalmation.png",
+      "description": "Electric ducimus systematic lumen Engineer Wyoming dignissimos Neither",
+      "isFavorite": true,
+      "id": 5
+    },
+    {
+      "name": "Earnest",
+      "image": "/assets/cowardly.png",
+      "description": "maroon Administrator Pound kid female",
+      "isFavorite": false,
+      "id": 6
+    },
+    {
+      "name": "Virginie",
+      "image": "/assets/chihuahua.avif",
+      "description": "Crew Fermium SSD Washington Molybdenum compressing Music",
+      "isFavorite": true,
+      "id": 7
+    },
+    {
+      "name": "Giuseppe",
+      "image": "/assets/chihuahua.avif",
+      "description": "transmit calculating Sleek Country salmon Investor hack",
+      "isFavorite": false,
+      "id": 8
+    },
+    {
+      "name": "Rashawn",
+      "image": "/assets/blue-heeler.png",
+      "description": "Tuna programming Account connecting Tasty Brand dill",
+      "isFavorite": false,
+      "id": 9
+    },
+    {
+      "name": "Sibyl",
+      "image": "/assets/dalmation.png",
+      "description": "Personal Passenger pfft cascade index",
+      "isFavorite": false,
+      "id": 10
+    },
+    {
+      "name": "Casey",
+      "image": "/assets/corgi.png",
+      "description": "gadzooks Fluorine Plastic overriding alarm Automated brook interface",
+      "isFavorite": false,
+      "id": 11
+    },
+    {
+      "name": "Melvina",
+      "image": "/assets/cowardly.png",
+      "description": "tolerance virtual Jazz system Yttrium",
+      "isFavorite": true,
       "id": 12
     },
     {
-      "name": "Hardy",
+      "name": "Claudine",
       "image": "/assets/boxer.png",
-      "description": "Wagon Transexual Luxembourg reinvent sky",
+      "description": "white Sierra Direct that Diesel",
       "isFavorite": false,
+      "id": 13
+    },
+    {
+      "name": "Shanny",
+      "image": "/assets/dalmation.png",
+      "description": "cyan 1080p hack Optimization Southwest",
+      "isFavorite": false,
+      "id": 14
+    },
+    {
+      "name": "Maddison",
+      "image": "/assets/corgi.png",
+      "description": "Southeast Baby programming Reggae Tuna SDD yippee female",
+      "isFavorite": false,
+      "id": 17
+    },
+    {
+      "name": "Alessia",
+      "image": "/assets/dalmation.png",
+      "description": "man ROI mint indexing Rubber whether Orchestrator Bronze",
+      "isFavorite": true,
       "id": 18
     },
     {
-      "name": "Sarah",
-      "image": "/assets/dalmation.png",
-      "description": "Southwest gah Marketing slice Steel Northwest Card compress",
-      "isFavorite": true,
+      "name": "Pansy",
+      "image": "/assets/blue-heeler.png",
+      "description": "facilis auxiliary pfft meter global OCR turquoise",
+      "isFavorite": false,
       "id": 19
     },
     {
-      "name": "Philip",
-      "image": "/assets/dalmation.png",
-      "description": "The gangsta doggie",
-      "isFavorite": true,
+      "name": "Repunzel ",
+      "image": "/assets/corgi.png",
+      "description": "super long hair yo",
+      "isFavorite": false,
       "id": 20
     },
     {
-      "name": "Donatello",
-      "image": "/assets/blue-heeler.png",
-      "description": "Teenage Mutant Ninja Doggy!  Brow now now now now now nooooooowww!!!",
-      "isFavorite": false,
-      "id": 24
-    },
-    {
-      "name": "My Pet Monster",
+      "name": "sdf",
       "image": "/assets/chihuahua.avif",
-      "description": "A Monster of a Friend",
+      "description": "asdf",
       "isFavorite": false,
-      "id": 25
-    },
-    {
-      "name": "Da Newest Doggo",
-      "image": "/assets/corgi.png",
-      "description": "I is the newest Doggo on the block, please feed me treats :) ",
-      "isFavorite": false,
-      "id": 26
-    },
-    {
-      "name": "frank",
-      "image": "/assets/blue-heeler.png",
-      "description": "herbert",
-      "isFavorite": false,
-      "id": 29
+      "id": 21
     }
   ]
 }

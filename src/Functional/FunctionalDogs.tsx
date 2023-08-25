@@ -8,6 +8,13 @@ export const FunctionalDogs = () => {
 
   const fetchData = () => Requests.getAllDogs().then(setDogs);
 
+  const toggleFavoriteStatus = (dog: Dog) => {
+    const newStatus = dog.isFavorite === false ? true : false;
+    Requests.updateDog(dog.id, { isFavorite: newStatus }).then(() =>
+      fetchData()
+    );
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -21,10 +28,10 @@ export const FunctionalDogs = () => {
             Requests.deleteDog(dog.id).then(() => fetchData());
           }}
           onHeartClick={() => {
-            alert("clicked heart");
+            toggleFavoriteStatus(dog);
           }}
           onEmptyHeartClick={() => {
-            alert("clicked empty heart");
+            toggleFavoriteStatus(dog);
           }}
           isLoading={false}
         />
@@ -32,66 +39,3 @@ export const FunctionalDogs = () => {
     </>
   );
 };
-
-{
-  /* <DogCard
-        dog={{
-          id: 2,
-          image: dogPictures.Boxer,
-          description: "Example Description",
-          isFavorite: false,
-          name: "Cute Boxer",
-        }}
-        key={2}
-        onTrashIconClick={() => {
-          alert("clicked trash");
-        }}
-        onHeartClick={() => {
-          alert("clicked heart");
-        }}
-        onEmptyHeartClick={() => {
-          alert("clicked empty heart");
-        }}
-        isLoading={false}
-      />
-      <DogCard
-        dog={{
-          id: 3,
-          image: dogPictures.Chihuahua,
-          description: "Example Description",
-          isFavorite: false,
-          name: "Cute Chihuahua",
-        }}
-        key={3}
-        onTrashIconClick={() => {
-          alert("clicked trash");
-        }}
-        onHeartClick={() => {
-          alert("clicked heart");
-        }}
-        onEmptyHeartClick={() => {
-          alert("clicked empty heart");
-        }}
-        isLoading={false}
-      />
-      <DogCard
-        dog={{
-          id: 4,
-          image: dogPictures.Corgi,
-          description: "Example Description",
-          isFavorite: false,
-          name: "Cute Corgi",
-        }}
-        key={4}
-        onTrashIconClick={() => {
-          alert("clicked trash");
-        }}
-        onHeartClick={() => {
-          alert("clicked heart");
-        }}
-        onEmptyHeartClick={() => {
-          alert("clicked empty heart");
-        }}
-        isLoading={false}
-      /> */
-}

@@ -20,7 +20,14 @@ export const Requests = {
       method: "DELETE",
     }).then((response) => response.json()),
 
-  updateDog: () => {},
+  updateDog: (id: number, update: { isFavorite: boolean }): Promise<Dog> =>
+    fetch(`${baseUrl}/dogs/${id}`, {
+      body: JSON.stringify(update),
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((response) => response.json()),
 
   // Just a dummy function for use in the playground
   dummyFunction: (data: Dog[]) => {

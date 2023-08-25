@@ -16,6 +16,13 @@ export class ClassDogs extends Component<Record<string, never>, State> {
     Requests.getAllDogs().then((data) => this.setState({ allDogs: data }));
   };
 
+  toggleFavoriteStatus = (dog: Dog) => {
+    const newStatus = dog.isFavorite === false ? true : false;
+    Requests.updateDog(dog.id, { isFavorite: newStatus }).then(() =>
+      this.fetchData()
+    );
+  };
+
   componentDidMount(): void {
     this.fetchData();
   }
@@ -32,10 +39,10 @@ export class ClassDogs extends Component<Record<string, never>, State> {
               Requests.deleteDog(dog.id).then(() => this.fetchData());
             }}
             onHeartClick={() => {
-              alert("clicked heart");
+              this.toggleFavoriteStatus(dog);
             }}
             onEmptyHeartClick={() => {
-              alert("clicked empty heart");
+              this.toggleFavoriteStatus(dog);
             }}
             isLoading={false}
           />
