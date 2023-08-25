@@ -3,21 +3,15 @@ import { Component } from "react";
 import { Requests } from "../api";
 import { Dog } from "../types";
 
-type State = {
-  allDogs: Dog[];
-};
-
 type Props = {
   display: "allDogs" | "favorites" | "unFavorites";
+  allDogs: Dog[];
+  setAllDogs: (data: Dog[]) => void;
 };
 
-export class ClassDogs extends Component<Props, State> {
-  state: State = {
-    allDogs: [],
-  };
-
+export class ClassDogs extends Component<Props> {
   fetchData = () => {
-    Requests.getAllDogs().then((data) => this.setState({ allDogs: data }));
+    Requests.getAllDogs().then((data) => this.props.setAllDogs(data));
   };
 
   toggleFavoriteStatus = (dog: Dog) => {
@@ -38,8 +32,7 @@ export class ClassDogs extends Component<Props, State> {
   };
 
   render() {
-    const { display } = this.props;
-    const { allDogs } = this.state;
+    const { display, allDogs } = this.props;
     return (
       <>
         {allDogs.filter(this.filterCB[display]).map((dog: Dog) => (

@@ -1,16 +1,18 @@
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect } from "react";
 import { DogCard } from "../Shared/DogCard";
 import { Dog } from "../types";
 import { Requests } from "../api";
 
 export const FunctionalDogs = ({
   display,
+  allDogs,
+  setAllDogs,
 }: {
   display: "allDogs" | "favorites" | "unFavorites";
+  allDogs: Dog[];
+  setAllDogs: Dispatch<SetStateAction<Dog[]>>;
 }) => {
-  const [allDogs, setDogs] = useState<Dog[]>([]);
-
-  const fetchData = () => Requests.getAllDogs().then(setDogs);
+  const fetchData = () => Requests.getAllDogs().then(setAllDogs);
 
   const toggleFavoriteStatus = (dog: Dog) => {
     const newStatus = dog.isFavorite === false ? true : false;

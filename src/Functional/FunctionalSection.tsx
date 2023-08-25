@@ -1,7 +1,6 @@
-// you can use this type for react children if you so choose
 import { Dispatch, ReactNode, SetStateAction, useState } from "react";
 import { Link } from "react-router-dom";
-import { Displays } from "../types";
+import { Displays, Dog } from "../types";
 
 type isActive = {
   favorited: boolean;
@@ -11,10 +10,12 @@ type isActive = {
 
 export const FunctionalSection = ({
   children,
+  allDogs,
   display,
   setDisplay,
 }: {
   children: ReactNode;
+  allDogs: Dog[];
   display: string;
   setDisplay: Dispatch<SetStateAction<Displays>>;
 }) => {
@@ -23,6 +24,9 @@ export const FunctionalSection = ({
     unFavorited: false,
     createDog: false,
   });
+
+  const favorites = (dog: Dog) => dog.isFavorite === true;
+  const unFavorites = (dog: Dog) => dog.isFavorite === false;
 
   return (
     <section id="main-section">
@@ -48,7 +52,7 @@ export const FunctionalSection = ({
               setDisplay(newDisplay);
             }}
           >
-            favorited ( {12} )
+            favorited ( {allDogs.filter(favorites).length} )
           </div>
 
           {/* This should display the unfavorited count */}
@@ -67,7 +71,7 @@ export const FunctionalSection = ({
               setDisplay(newDisplay);
             }}
           >
-            unfavorited ( {12} )
+            unfavorited ( {allDogs.filter(unFavorites).length} )
           </div>
           <div
             className={`selector ${isActive.createDog && "active"}`}

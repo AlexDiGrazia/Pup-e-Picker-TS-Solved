@@ -1,81 +1,88 @@
 {
   "dogs": [
     {
-      "name": "Maddison",
+      "name": "Rodrick",
       "image": "/assets/corgi.png",
-      "description": "Southeast Baby programming Reggae Tuna SDD yippee female",
+      "description": "never seize Trial utilize Quality feed Omani Manager",
+      "isFavorite": false,
+      "id": 7
+    },
+    {
+      "name": "Orlando",
+      "image": "/assets/chihuahua.avif",
+      "description": "green lug Dram silver port Consultant yellow Hop",
+      "isFavorite": true,
+      "id": 8
+    },
+    {
+      "name": "Melody",
+      "image": "/assets/corgi.png",
+      "description": "Account Intelligent conglomeration wherever blame",
+      "isFavorite": true,
+      "id": 9
+    },
+    {
+      "name": "Kasey",
+      "image": "/assets/corgi.png",
+      "description": "parse pot compelling marshmallow Moscovium transmitter ADP",
+      "isFavorite": false,
+      "id": 10
+    },
+    {
+      "name": "Gayle",
+      "image": "/assets/chihuahua.avif",
+      "description": "sit customized North hard honorable pariatur black",
+      "isFavorite": false,
+      "id": 11
+    },
+    {
+      "name": "Lilla",
+      "image": "/assets/boxer.png",
+      "description": "Diesel um online Human circuit wireless generation Infrastructure",
+      "isFavorite": false,
+      "id": 12
+    },
+    {
+      "name": "Laisha",
+      "image": "/assets/boxer.png",
+      "description": "male male mint Bike Uruguay Avon overriding Integration",
+      "isFavorite": true,
+      "id": 13
+    },
+    {
+      "name": "Kadin",
+      "image": "/assets/cowardly.png",
+      "description": "distributed partnerships Generic motivating Ergonomic",
+      "isFavorite": true,
+      "id": 14
+    },
+    {
+      "name": "Lawson",
+      "image": "/assets/chihuahua.avif",
+      "description": "Intersex synergy infrastructure deleniti input",
+      "isFavorite": false,
+      "id": 16
+    },
+    {
+      "name": "Lazaro",
+      "image": "/assets/boxer.png",
+      "description": "PNG Ville Chief male Dalasi",
       "isFavorite": true,
       "id": 17
     },
     {
-      "name": "Alessia",
-      "image": "/assets/dalmation.png",
-      "description": "man ROI mint indexing Rubber whether Orchestrator Bronze",
+      "name": "Patsy",
+      "image": "/assets/chihuahua.avif",
+      "description": "Diesel Sudanese West Fantastic Car green Ben Via",
       "isFavorite": false,
       "id": 18
     },
     {
-      "name": "Pansy",
-      "image": "/assets/blue-heeler.png",
-      "description": "facilis auxiliary pfft meter global OCR turquoise",
-      "isFavorite": false,
+      "name": "Raquel",
+      "image": "/assets/dalmation.png",
+      "description": "Card Ergonomic qua Chance transform keenly payment",
+      "isFavorite": true,
       "id": 19
-    },
-    {
-      "name": "Repunzel ",
-      "image": "/assets/corgi.png",
-      "description": "super long hair yo",
-      "isFavorite": false,
-      "id": 20
-    },
-    {
-      "name": "sdf",
-      "image": "/assets/chihuahua.avif",
-      "description": "asdf",
-      "isFavorite": false,
-      "id": 21
-    },
-    {
-      "name": "Sally",
-      "image": "/assets/boxer.jpeg",
-      "description": "The Soaring sass ball",
-      "isFavorite": false,
-      "id": 22
-    },
-    {
-      "name": "Harold",
-      "image": "/assets/cowardly.png",
-      "description": "The magnificent butt sniffer",
-      "isFavorite": true,
-      "id": 23
-    },
-    {
-      "name": "Paco",
-      "image": "/assets/chihuahua.avif",
-      "description": "The best doggie in the whole entire woooorld!!",
-      "isFavorite": false,
-      "id": 24
-    },
-    {
-      "name": "Chica",
-      "image": "/assets/chihuahua.avif",
-      "description": "Paco's sissy ",
-      "isFavorite": false,
-      "id": 25
-    },
-    {
-      "name": "dog",
-      "image": "/assets/blue-heeler.png",
-      "description": "doggo",
-      "isFavorite": true,
-      "id": 26
-    },
-    {
-      "name": "number2",
-      "image": "/assets/blue-heeler.png",
-      "description": "doggo",
-      "isFavorite": true,
-      "id": 27
     }
   ]
 }

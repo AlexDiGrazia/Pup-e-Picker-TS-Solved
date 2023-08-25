@@ -1,10 +1,11 @@
 // you can use `ReactNode` to add a type to the children prop
 import { Component, ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { Displays } from "../types";
+import { Displays, Dog } from "../types";
 
 type Props = {
   children: ReactNode;
+  allDogs: Dog[];
   display: string;
   setDisplay: (newDisplay: Displays) => void;
 };
@@ -17,9 +18,13 @@ export class ClassSection extends Component<Props, State> {
   state: State = {
     isActive: { favorited: false, unFavorited: false, createDog: false },
   };
+
+  favorites = (dog: Dog) => dog.isFavorite === true;
+  unFavorites = (dog: Dog) => dog.isFavorite === false;
+
   render() {
     const { isActive } = this.state;
-    const { display, setDisplay } = this.props;
+    const { display, setDisplay, allDogs } = this.props;
     return (
       <section id="main-section">
         <div className="container-header">
@@ -48,7 +53,7 @@ export class ClassSection extends Component<Props, State> {
                 setDisplay(newDisplay);
               }}
             >
-              favorited ( 0 )
+              favorited ( {allDogs.filter(this.favorites).length} )
             </div>
 
             {/* This should display the unfavorited count */}
@@ -69,7 +74,7 @@ export class ClassSection extends Component<Props, State> {
                 setDisplay(newDisplay);
               }}
             >
-              unfavorited ( 0 )
+              unfavorited ( {allDogs.filter(this.unFavorites).length} )
             </div>
             <div
               className={`selector ${isActive.createDog && "active"}`}
