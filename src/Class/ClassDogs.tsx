@@ -12,8 +12,12 @@ export class ClassDogs extends Component<Record<string, never>, State> {
     allDogs: [],
   };
 
-  componentDidMount(): void {
+  fetchData = () => {
     Requests.getAllDogs().then((data) => this.setState({ allDogs: data }));
+  };
+
+  componentDidMount(): void {
+    this.fetchData();
   }
 
   render() {
@@ -25,7 +29,7 @@ export class ClassDogs extends Component<Record<string, never>, State> {
             dog={{ ...dog }}
             key={dog.id}
             onTrashIconClick={() => {
-              alert("clicked trash");
+              Requests.deleteDog(dog.id).then(() => this.fetchData());
             }}
             onHeartClick={() => {
               alert("clicked heart");

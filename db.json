@@ -1,123 +1,11 @@
 {
   "dogs": [
     {
-      "name": "Edythe",
-      "image": "/assets/chihuahua.avif",
-      "description": "Country programming third Astatine THX female which",
-      "isFavorite": true,
-      "id": 1
-    },
-    {
-      "name": "Tillman",
-      "image": "/assets/chihuahua.avif",
-      "description": "lime schemas drive blockchains Sleek",
-      "isFavorite": true,
-      "id": 2
-    },
-    {
-      "name": "Dan",
-      "image": "/assets/corgi.png",
-      "description": "parsing solutions Administrator voluptatibus West",
-      "isFavorite": false,
-      "id": 3
-    },
-    {
-      "name": "Kobe",
-      "image": "/assets/blue-heeler.png",
-      "description": "Gasoline Car World TLS Computer",
-      "isFavorite": true,
-      "id": 4
-    },
-    {
-      "name": "Hannah",
-      "image": "/assets/blue-heeler.png",
-      "description": "24/365 SCSI matrices Tasty system Gasoline Bicycle Mazda",
-      "isFavorite": true,
-      "id": 5
-    },
-    {
-      "name": "Wilburn",
-      "image": "/assets/corgi.png",
-      "description": "Supervisor Coordinator within Functionality Associate Southeast Northwest",
-      "isFavorite": true,
-      "id": 6
-    },
-    {
-      "name": "Janice",
-      "image": "/assets/cowardly.png",
-      "description": "Northeast Personal Electronics versus Tajikistan Kina West pricing",
-      "isFavorite": false,
-      "id": 7
-    },
-    {
-      "name": "Sydni",
-      "image": "/assets/cowardly.png",
-      "description": "Mazda Tennessee transmitter HDD recusandae baste Senior protocol",
-      "isFavorite": false,
-      "id": 8
-    },
-    {
-      "name": "Casimir",
-      "image": "/assets/chihuahua.avif",
-      "description": "Van exuding stipple Metal partnerships tap Account Handmade",
-      "isFavorite": false,
-      "id": 9
-    },
-    {
-      "name": "Ewald",
-      "image": "/assets/blue-heeler.png",
-      "description": "intuitive Southeast Producer up cultivate bluetooth invoice vigilant",
-      "isFavorite": true,
-      "id": 10
-    },
-    {
-      "name": "Eugenia",
-      "image": "/assets/dalmation.png",
-      "description": "streamline withdrawal Electric orange South Carolina Som",
-      "isFavorite": false,
-      "id": 11
-    },
-    {
       "name": "April",
       "image": "/assets/corgi.png",
       "description": "Electric portals Oganesson Beauty Producer",
       "isFavorite": false,
       "id": 12
-    },
-    {
-      "name": "Connie",
-      "image": "/assets/dalmation.png",
-      "description": "cruelly Pants strategize solutions redundant",
-      "isFavorite": false,
-      "id": 13
-    },
-    {
-      "name": "Doug",
-      "image": "/assets/corgi.png",
-      "description": "pink Industrial Androgynous implement Keyboard sticker portal Account",
-      "isFavorite": true,
-      "id": 14
-    },
-    {
-      "name": "Jan",
-      "image": "/assets/chihuahua.avif",
-      "description": "stable Folding Electronic boo Loan Computers Androgyne",
-      "isFavorite": true,
-      "id": 15
-    },
-    {
-      "name": "Nicholaus",
-      "image": "/assets/dalmation.png",
-      "description": "Hatchback orchid man orchestration person Sedan ew easily",
-      "isFavorite": true,
-      "id": 16
-    },
-    {
-      "name": "Roma",
-      "image": "/assets/boxer.png",
-      "description": "Dakota Product Krona dog Connecticut",
-      "isFavorite": true,
-      "id": 17
     },
     {
       "name": "Hardy",
@@ -141,20 +29,6 @@
       "id": 20
     },
     {
-      "name": "Dog",
-      "image": "/assets/corgi.png",
-      "description": "hound",
-      "isFavorite": false,
-      "id": 22
-    },
-    {
-      "name": "Rick Astley",
-      "image": "/assets/boxer.jpeg",
-      "description": "Never Gonna give you up",
-      "isFavorite": false,
-      "id": 23
-    },
-    {
       "name": "Donatello",
       "image": "/assets/blue-heeler.png",
       "description": "Teenage Mutant Ninja Doggy!  Brow now now now now now nooooooowww!!!",
@@ -174,6 +48,13 @@
       "description": "I is the newest Doggo on the block, please feed me treats :) ",
       "isFavorite": false,
       "id": 26
+    },
+    {
+      "name": "frank",
+      "image": "/assets/blue-heeler.png",
+      "description": "herbert",
+      "isFavorite": false,
+      "id": 29
     }
   ]
 }

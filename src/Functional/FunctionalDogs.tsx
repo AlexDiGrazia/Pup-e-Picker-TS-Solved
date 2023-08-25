@@ -6,8 +6,10 @@ import { Requests } from "../api";
 export const FunctionalDogs = () => {
   const [allDogs, setDogs] = useState<Dog[]>([]);
 
+  const fetchData = () => Requests.getAllDogs().then(setDogs);
+
   useEffect(() => {
-    Requests.getAllDogs().then(setDogs);
+    fetchData();
   }, []);
   return (
     <>
@@ -16,7 +18,7 @@ export const FunctionalDogs = () => {
           dog={{ ...dog }}
           key={dog.id}
           onTrashIconClick={() => {
-            alert("clicked trash");
+            Requests.deleteDog(dog.id).then(() => fetchData());
           }}
           onHeartClick={() => {
             alert("clicked heart");
