@@ -13,7 +13,7 @@ export function FunctionalApp() {
         <h1>pup-e-picker (Functional)</h1>
       </header>
       <FunctionalSection display={display} setDisplay={setDisplay}>
-        {display === "allDogs" && <FunctionalDogs />}
+        {display !== "form" && <FunctionalDogs display={display} />}
         {display === "form" && <FunctionalCreateDogForm />}
       </FunctionalSection>
     </div>

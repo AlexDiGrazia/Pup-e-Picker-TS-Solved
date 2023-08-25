@@ -48,7 +48,7 @@ export const FunctionalSection = ({
               setDisplay(newDisplay);
             }}
           >
-            favorited ( 12 )
+            favorited ( {12} )
           </div>
 
           {/* This should display the unfavorited count */}
@@ -67,7 +67,7 @@ export const FunctionalSection = ({
               setDisplay(newDisplay);
             }}
           >
-            unfavorited ( 25 )
+            unfavorited ( {12} )
           </div>
           <div
             className={`selector ${isActive.createDog && "active"}`}

@@ -23,7 +23,7 @@ export class ClassApp extends Component<Record<string, never>, State> {
           <h1>pup-e-picker (Class Version)</h1>
         </header>
         <ClassSection display={display} setDisplay={this.setDisplay}>
-          {display === "allDogs" && <ClassDogs />}
+          {display !== "form" && <ClassDogs display={display} />}
           {display === "form" && <ClassCreateDogForm />}
         </ClassSection>
 

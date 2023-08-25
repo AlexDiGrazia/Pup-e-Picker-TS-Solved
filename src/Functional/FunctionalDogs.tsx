@@ -3,7 +3,11 @@ import { DogCard } from "../Shared/DogCard";
 import { Dog } from "../types";
 import { Requests } from "../api";
 
-export const FunctionalDogs = () => {
+export const FunctionalDogs = ({
+  display,
+}: {
+  display: "allDogs" | "favorites" | "unFavorites";
+}) => {
   const [allDogs, setDogs] = useState<Dog[]>([]);
 
   const fetchData = () => Requests.getAllDogs().then(setDogs);
@@ -18,9 +22,16 @@ export const FunctionalDogs = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
+  const filterCB = {
+    allDogs: (dog: Dog) => dog,
+    favorites: (dog: Dog) => dog.isFavorite === true,
+    unFavorites: (dog: Dog) => dog.isFavorite === false,
+  };
+
   return (
     <>
-      {allDogs.map((dog) => (
+      {allDogs.filter(filterCB[display]).map((dog: Dog) => (
         <DogCard
           dog={{ ...dog }}
           key={dog.id}

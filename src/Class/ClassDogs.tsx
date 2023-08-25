@@ -7,7 +7,11 @@ type State = {
   allDogs: Dog[];
 };
 
-export class ClassDogs extends Component<Record<string, never>, State> {
+type Props = {
+  display: "allDogs" | "favorites" | "unFavorites";
+};
+
+export class ClassDogs extends Component<Props, State> {
   state: State = {
     allDogs: [],
   };
@@ -27,11 +31,18 @@ export class ClassDogs extends Component<Record<string, never>, State> {
     this.fetchData();
   }
 
+  filterCB = {
+    allDogs: (dog: Dog) => dog,
+    favorites: (dog: Dog) => dog.isFavorite === true,
+    unFavorites: (dog: Dog) => dog.isFavorite === false,
+  };
+
   render() {
+    const { display } = this.props;
     const { allDogs } = this.state;
     return (
       <>
-        {allDogs.map((dog) => (
+        {allDogs.filter(this.filterCB[display]).map((dog: Dog) => (
           <DogCard
             dog={{ ...dog }}
             key={dog.id}

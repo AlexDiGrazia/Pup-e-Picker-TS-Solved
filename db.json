@@ -1,115 +1,17 @@
 {
   "dogs": [
     {
-      "name": "Milan",
-      "image": "/assets/chihuahua.avif",
-      "description": "Implementation Diesel verb Optimization Human",
-      "isFavorite": false,
-      "id": 0
-    },
-    {
-      "name": "Salma",
-      "image": "/assets/blue-heeler.png",
-      "description": "efficient Iron disintermediate Bicycle Trial until boo Salad",
-      "isFavorite": false,
-      "id": 2
-    },
-    {
-      "name": "Jacynthe",
-      "image": "/assets/corgi.png",
-      "description": "calculating Tesla Steel flash Celsius",
-      "isFavorite": false,
-      "id": 3
-    },
-    {
-      "name": "Chelsea",
-      "image": "/assets/chihuahua.avif",
-      "description": "until pucker soot Associate relationships maroon Orchestrator",
-      "isFavorite": true,
-      "id": 4
-    },
-    {
-      "name": "Brain",
-      "image": "/assets/dalmation.png",
-      "description": "Electric ducimus systematic lumen Engineer Wyoming dignissimos Neither",
-      "isFavorite": true,
-      "id": 5
-    },
-    {
-      "name": "Earnest",
-      "image": "/assets/cowardly.png",
-      "description": "maroon Administrator Pound kid female",
-      "isFavorite": false,
-      "id": 6
-    },
-    {
-      "name": "Virginie",
-      "image": "/assets/chihuahua.avif",
-      "description": "Crew Fermium SSD Washington Molybdenum compressing Music",
-      "isFavorite": true,
-      "id": 7
-    },
-    {
-      "name": "Giuseppe",
-      "image": "/assets/chihuahua.avif",
-      "description": "transmit calculating Sleek Country salmon Investor hack",
-      "isFavorite": false,
-      "id": 8
-    },
-    {
-      "name": "Rashawn",
-      "image": "/assets/blue-heeler.png",
-      "description": "Tuna programming Account connecting Tasty Brand dill",
-      "isFavorite": false,
-      "id": 9
-    },
-    {
-      "name": "Sibyl",
-      "image": "/assets/dalmation.png",
-      "description": "Personal Passenger pfft cascade index",
-      "isFavorite": false,
-      "id": 10
-    },
-    {
-      "name": "Casey",
-      "image": "/assets/corgi.png",
-      "description": "gadzooks Fluorine Plastic overriding alarm Automated brook interface",
-      "isFavorite": false,
-      "id": 11
-    },
-    {
-      "name": "Melvina",
-      "image": "/assets/cowardly.png",
-      "description": "tolerance virtual Jazz system Yttrium",
-      "isFavorite": true,
-      "id": 12
-    },
-    {
-      "name": "Claudine",
-      "image": "/assets/boxer.png",
-      "description": "white Sierra Direct that Diesel",
-      "isFavorite": false,
-      "id": 13
-    },
-    {
-      "name": "Shanny",
-      "image": "/assets/dalmation.png",
-      "description": "cyan 1080p hack Optimization Southwest",
-      "isFavorite": false,
-      "id": 14
-    },
-    {
       "name": "Maddison",
       "image": "/assets/corgi.png",
       "description": "Southeast Baby programming Reggae Tuna SDD yippee female",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 17
     },
     {
       "name": "Alessia",
       "image": "/assets/dalmation.png",
       "description": "man ROI mint indexing Rubber whether Orchestrator Bronze",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 18
     },
     {
@@ -132,6 +34,48 @@
       "description": "asdf",
       "isFavorite": false,
       "id": 21
+    },
+    {
+      "name": "Sally",
+      "image": "/assets/boxer.jpeg",
+      "description": "The Soaring sass ball",
+      "isFavorite": false,
+      "id": 22
+    },
+    {
+      "name": "Harold",
+      "image": "/assets/cowardly.png",
+      "description": "The magnificent butt sniffer",
+      "isFavorite": true,
+      "id": 23
+    },
+    {
+      "name": "Paco",
+      "image": "/assets/chihuahua.avif",
+      "description": "The best doggie in the whole entire woooorld!!",
+      "isFavorite": false,
+      "id": 24
+    },
+    {
+      "name": "Chica",
+      "image": "/assets/chihuahua.avif",
+      "description": "Paco's sissy ",
+      "isFavorite": false,
+      "id": 25
+    },
+    {
+      "name": "dog",
+      "image": "/assets/blue-heeler.png",
+      "description": "doggo",
+      "isFavorite": true,
+      "id": 26
+    },
+    {
+      "name": "number2",
+      "image": "/assets/blue-heeler.png",
+      "description": "doggo",
+      "isFavorite": true,
+      "id": 27
     }
   ]
 }
