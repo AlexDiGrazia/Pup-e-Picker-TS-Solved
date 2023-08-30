@@ -8,17 +8,19 @@ type isActive = {
   createDog: boolean;
 };
 
+type SectionProps = {
+  children: ReactNode;
+  allDogs: Dog[];
+  display: string;
+  setDisplay: Dispatch<SetStateAction<Displays>>;
+};
+
 export const FunctionalSection = ({
   children,
   allDogs,
   display,
   setDisplay,
-}: {
-  children: ReactNode;
-  allDogs: Dog[];
-  display: string;
-  setDisplay: Dispatch<SetStateAction<Displays>>;
-}) => {
+}: SectionProps) => {
   const [isActive, setIsActive] = useState<isActive>({
     favorited: false,
     unFavorited: false,
@@ -36,7 +38,7 @@ export const FunctionalSection = ({
           Change to Class
         </Link>
         <div className="selectors">
-          {/* This should display the favorited count */}
+          {/* This should display the favorited count */}›
           <div
             className={`selector ${isActive.favorited && "active"}`}
             onClick={() => {
@@ -54,7 +56,6 @@ export const FunctionalSection = ({
           >
             favorited ( {allDogs.filter(favorites).length} )
           </div>
-
           {/* This should display the unfavorited count */}
           <div
             className={`selector ${isActive.unFavorited && "active"}`}

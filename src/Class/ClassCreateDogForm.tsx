@@ -7,45 +7,53 @@ type State = {
   imageInput: string;
   descriptionInput: string;
 };
+
+type Props = {
+  fetchData: () => void;
+  isLoading: boolean;
+  setIsLoading: (bool: boolean) => void;
+};
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
-export class ClassCreateDogForm extends Component<
-  Record<string, never>,
-  State
-> {
+export class ClassCreateDogForm extends Component<Props, State> {
   state: State = {
     nameInput: "",
     imageInput: defaultSelectedImage,
     descriptionInput: "",
   };
+
+  handleSubmit = (e: React.FormEvent) => {
+    const { nameInput, imageInput, descriptionInput } = this.state;
+    const { setIsLoading, fetchData } = this.props;
+    e.preventDefault();
+    setIsLoading(true);
+    Requests.postDog({
+      name: nameInput,
+      image: imageInput,
+      description: descriptionInput,
+      isFavorite: false,
+    })
+      .then(() => fetchData())
+      .finally(() => setIsLoading(false));
+
+    this.setState({
+      nameInput: "",
+      imageInput: defaultSelectedImage,
+      descriptionInput: "",
+    });
+  };
   render() {
     const { nameInput, imageInput, descriptionInput } = this.state;
+    const { isLoading } = this.props;
     return (
-      <form
-        action=""
-        id="create-dog-form"
-        onSubmit={(e) => {
-          e.preventDefault();
-          Requests.postDog({
-            name: nameInput,
-            image: imageInput,
-            description: descriptionInput,
-            isFavorite: false,
-          });
-          this.setState({
-            nameInput: "",
-            imageInput: defaultSelectedImage,
-            descriptionInput: "",
-          });
-        }}
-      >
+      <form action="" id="create-dog-form" onSubmit={this.handleSubmit}>
         <h4>Create a New Dog</h4>
         <label htmlFor="name">Dog Name</label>
         <input
           type="text"
           value={nameInput}
           onChange={(e) => this.setState({ nameInput: e.target.value })}
-          disabled={false}
+          disabled={isLoading}
         />
         <label htmlFor="description">Dog Description</label>
         <textarea
@@ -55,14 +63,14 @@ export class ClassCreateDogForm extends Component<
           onChange={(e) => this.setState({ descriptionInput: e.target.value })}
           cols={80}
           rows={10}
-          disabled={false}
+          disabled={isLoading}
         />
         <label htmlFor="picture">Select an Image</label>
         <select
           id="picture"
           value={imageInput}
           onChange={(e) => this.setState({ imageInput: e.target.value })}
-          disabled={false}
+          disabled={isLoading}
         >
           {Object.entries(dogPictures).map(([label, pictureValue]) => {
             return (
@@ -72,7 +80,7 @@ export class ClassCreateDogForm extends Component<
             );
           })}
         </select>
-        <input type="submit" value="submit" disabled={false} />
+        <input type="submit" value="submit" disabled={isLoading} />
       </form>
     );
   }

@@ -3,10 +3,14 @@ import { FunctionalCreateDogForm } from "./FunctionalCreateDogForm";
 import { FunctionalDogs } from "./FunctionalDogs";
 import { FunctionalSection } from "./FunctionalSection";
 import { Displays, Dog } from "../types";
+import { Requests } from "../api";
 
 export function FunctionalApp() {
   const [display, setDisplay] = useState<Displays>("allDogs");
   const [allDogs, setAllDogs] = useState<Dog[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const fetchData = () => Requests.getAllDogs().then(setAllDogs);
 
   return (
     <div className="App" style={{ backgroundColor: "skyblue" }}>
@@ -21,12 +25,18 @@ export function FunctionalApp() {
         {display !== "form" && (
           <FunctionalDogs
             allDogs={allDogs}
-            setAllDogs={setAllDogs}
             display={display}
+            fetchData={fetchData}
+            isLoading={isLoading}
+            setIsLoading={setIsLoading}
           />
         )}
         {display === "form" && (
-          <FunctionalCreateDogForm setAllDogs={setAllDogs} />
+          <FunctionalCreateDogForm
+            fetchData={fetchData}
+            isLoading={isLoading}
+            setIsLoading={setIsLoading}
+          />
         )}
       </FunctionalSection>
     </div>

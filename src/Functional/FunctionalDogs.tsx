@@ -6,19 +6,29 @@ import { Requests } from "../api";
 export const FunctionalDogs = ({
   display,
   allDogs,
-  setAllDogs,
+  fetchData,
+  isLoading,
+  setIsLoading,
 }: {
   display: "allDogs" | "favorites" | "unFavorites";
   allDogs: Dog[];
-  setAllDogs: Dispatch<SetStateAction<Dog[]>>;
+  fetchData: () => void;
+  isLoading: boolean;
+  setIsLoading: Dispatch<SetStateAction<boolean>>;
 }) => {
-  const fetchData = () => Requests.getAllDogs().then(setAllDogs);
-
   const toggleFavoriteStatus = (dog: Dog) => {
     const newStatus = dog.isFavorite === false ? true : false;
-    Requests.updateDog(dog.id, { isFavorite: newStatus }).then(() =>
-      fetchData()
-    );
+    setIsLoading(true);
+    Requests.updateDog(dog.id, { isFavorite: newStatus })
+      .then(() => fetchData())
+      .finally(() => setIsLoading(false));
+  };
+
+  const deleteDog = (dog: Dog) => {
+    setIsLoading(true);
+    Requests.deleteDog(dog.id)
+      .then(() => fetchData())
+      .finally(() => setIsLoading(false));
   };
 
   useEffect(() => {
@@ -38,7 +48,7 @@ export const FunctionalDogs = ({
           dog={{ ...dog }}
           key={dog.id}
           onTrashIconClick={() => {
-            Requests.deleteDog(dog.id).then(() => fetchData());
+            deleteDog(dog);
           }}
           onHeartClick={() => {
             toggleFavoriteStatus(dog);
@@ -46,7 +56,7 @@ export const FunctionalDogs = ({
           onEmptyHeartClick={() => {
             toggleFavoriteStatus(dog);
           }}
-          isLoading={false}
+          isLoading={isLoading}
         />
       ))}
     </>

@@ -4,25 +4,33 @@ import { Requests } from "../api";
 import { Dog } from "../types";
 
 type Props = {
-  display: "allDogs" | "favorites" | "unFavorites";
   allDogs: Dog[];
-  setAllDogs: (data: Dog[]) => void;
+  display: "allDogs" | "favorites" | "unFavorites";
+  fetchData: () => void;
+  isLoading: boolean;
+  setIsLoading: (bool: boolean) => void;
 };
 
 export class ClassDogs extends Component<Props> {
-  fetchData = () => {
-    Requests.getAllDogs().then((data) => this.props.setAllDogs(data));
+  toggleFavoriteStatus = (dog: Dog) => {
+    const { setIsLoading, fetchData } = this.props;
+    const newStatus = dog.isFavorite === false ? true : false;
+    setIsLoading(true);
+    Requests.updateDog(dog.id, { isFavorite: newStatus })
+      .then(() => fetchData())
+      .finally(() => setIsLoading(false));
   };
 
-  toggleFavoriteStatus = (dog: Dog) => {
-    const newStatus = dog.isFavorite === false ? true : false;
-    Requests.updateDog(dog.id, { isFavorite: newStatus }).then(() =>
-      this.fetchData()
-    );
+  deleteDog = (dog: Dog) => {
+    const { setIsLoading, fetchData } = this.props;
+    setIsLoading(true);
+    Requests.deleteDog(dog.id)
+      .then(() => fetchData())
+      .finally(() => setIsLoading(false));
   };
 
   componentDidMount(): void {
-    this.fetchData();
+    this.props.fetchData();
   }
 
   filterCB = {
@@ -32,7 +40,7 @@ export class ClassDogs extends Component<Props> {
   };
 
   render() {
-    const { display, allDogs } = this.props;
+    const { display, allDogs, isLoading } = this.props;
     return (
       <>
         {allDogs.filter(this.filterCB[display]).map((dog: Dog) => (
@@ -40,7 +48,7 @@ export class ClassDogs extends Component<Props> {
             dog={{ ...dog }}
             key={dog.id}
             onTrashIconClick={() => {
-              Requests.deleteDog(dog.id).then(() => this.fetchData());
+              this.deleteDog(dog);
             }}
             onHeartClick={() => {
               this.toggleFavoriteStatus(dog);
@@ -48,7 +56,7 @@ export class ClassDogs extends Component<Props> {
             onEmptyHeartClick={() => {
               this.toggleFavoriteStatus(dog);
             }}
-            isLoading={false}
+            isLoading={isLoading}
           />
         ))}
       </>

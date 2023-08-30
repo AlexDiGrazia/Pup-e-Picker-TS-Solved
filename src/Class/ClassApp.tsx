@@ -3,28 +3,35 @@ import { ClassSection } from "./ClassSection";
 import { ClassDogs } from "./ClassDogs";
 import { ClassCreateDogForm } from "./ClassCreateDogForm";
 import { Displays, Dog } from "../types";
+import { Requests } from "../api";
 
 type State = {
   display: Displays;
   allDogs: Dog[];
+  isLoading: boolean;
 };
 
 export class ClassApp extends Component<Record<string, never>, State> {
   state: State = {
     display: "allDogs",
     allDogs: [],
+    isLoading: false,
   };
 
   setDisplay = (newDisplay: Displays) => {
     this.setState({ display: newDisplay });
   };
 
-  setAllDogs = (data: Dog[]) => {
-    this.setState({ allDogs: data });
+  setIsLoading = (bool: boolean) => {
+    this.setState({ isLoading: bool });
+  };
+
+  fetchData = () => {
+    Requests.getAllDogs().then((data) => this.setState({ allDogs: data }));
   };
 
   render() {
-    const { display, allDogs } = this.state;
+    const { display, allDogs, isLoading } = this.state;
     return (
       <div className="App" style={{ backgroundColor: "goldenrod" }}>
         <header>
@@ -37,15 +44,21 @@ export class ClassApp extends Component<Record<string, never>, State> {
         >
           {display !== "form" && (
             <ClassDogs
-              display={display}
               allDogs={allDogs}
-              setAllDogs={this.setAllDogs}
+              display={display}
+              fetchData={this.fetchData}
+              isLoading={isLoading}
+              setIsLoading={this.setIsLoading}
             />
           )}
-          {display === "form" && <ClassCreateDogForm />}
+          {display === "form" && (
+            <ClassCreateDogForm
+              fetchData={this.fetchData}
+              isLoading={isLoading}
+              setIsLoading={this.setIsLoading}
+            />
+          )}
         </ClassSection>
-
-        {/* should be inside of the ClassSection component using react children */}
       </div>
     );
   }
