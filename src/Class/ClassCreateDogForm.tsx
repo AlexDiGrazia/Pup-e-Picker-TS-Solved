@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { dogPictures } from "../dog-pictures";
 import { Requests } from "../api";
+import { toast } from "react-hot-toast";
 
 type State = {
   nameInput: string;
@@ -34,6 +35,7 @@ export class ClassCreateDogForm extends Component<Props, State> {
       isFavorite: false,
     })
       .then(() => fetchData())
+      .then(() => toast.success("Dog Created"))
       .finally(() => setIsLoading(false));
 
     this.setState({

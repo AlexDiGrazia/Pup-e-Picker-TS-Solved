@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import { dogPictures } from "../dog-pictures";
 import { Requests } from "../api";
+import { toast } from "react-hot-toast";
 
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
@@ -27,6 +28,7 @@ export const FunctionalCreateDogForm = ({
       isFavorite: false,
     })
       .then(() => fetchData())
+      .then(() => toast.success("Dog Created"))
       .finally(() => setIsLoading(false));
 
     setNameInput("");

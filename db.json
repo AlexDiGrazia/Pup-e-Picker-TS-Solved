@@ -11,15 +11,8 @@
       "name": "Raquel",
       "image": "/assets/dalmation.png",
       "description": "Card Ergonomic qua Chance transform keenly payment",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 19
-    },
-    {
-      "name": "trevor",
-      "image": "/assets/corgi.png",
-      "description": "the doggest dog",
-      "isFavorite": false,
-      "id": 32
     },
     {
       "name": "Noah ",
@@ -97,6 +90,34 @@
       "description": "asfasdf",
       "isFavorite": false,
       "id": 48
+    },
+    {
+      "name": "Trouble",
+      "image": "/assets/cowardly.png",
+      "description": "the terrible doggo",
+      "isFavorite": false,
+      "id": 49
+    },
+    {
+      "name": "Testing Toast",
+      "image": "/assets/corgi.png",
+      "description": "is it toasted yet?",
+      "isFavorite": false,
+      "id": 50
+    },
+    {
+      "name": "toast",
+      "image": "/assets/blue-heeler.png",
+      "description": "timer",
+      "isFavorite": false,
+      "id": 51
+    },
+    {
+      "name": "new",
+      "image": "/assets/blue-heeler.png",
+      "description": "test",
+      "isFavorite": false,
+      "id": 52
     }
   ]
 }
