@@ -1,35 +1,36 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
 import { dogPictures } from "../dog-pictures";
 import { Requests } from "../api";
 import { toast } from "react-hot-toast";
+import { Dog } from "../types";
 
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
-export const FunctionalCreateDogForm = ({
-  fetchData,
-  isLoading,
-  setIsLoading,
-}: {
-  fetchData: () => void;
+type FormProps = {
   isLoading: boolean;
-  setIsLoading: Dispatch<SetStateAction<boolean>>;
-}) => {
+  loadingStateHandler: (apiCall: Promise<Dog>) => Promise<void>;
+};
+
+export const FunctionalCreateDogForm = ({
+  isLoading,
+  loadingStateHandler,
+}: FormProps) => {
   const [nameInput, setNameInput] = useState<string>("");
   const [descriptionInput, setDescriptionInput] = useState<string>("");
   const [imageInput, setImageInput] = useState<string>(defaultSelectedImage);
 
+  const newDog = {
+    name: nameInput,
+    image: imageInput,
+    description: descriptionInput,
+    isFavorite: false,
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true);
-    Requests.postDog({
-      name: nameInput,
-      image: imageInput,
-      description: descriptionInput,
-      isFavorite: false,
-    })
-      .then(() => fetchData())
-      .then(() => toast.success("Dog Created"))
-      .finally(() => setIsLoading(false));
+    loadingStateHandler(Requests.postDog(newDog)).then(() =>
+      toast.success("Dog Created")
+    );
 
     setNameInput("");
     setDescriptionInput("");

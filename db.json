@@ -1,123 +1,130 @@
 {
   "dogs": [
     {
-      "name": "Gayle",
+      "name": "Alivia",
+      "image": "/assets/cowardly.png",
+      "description": "Rustic than Facilitator Smart Chair cyan Forward pascal",
+      "isFavorite": false,
+      "id": 1
+    },
+    {
+      "name": "David",
+      "image": "/assets/boxer.png",
+      "description": "behind Metal science East to Demiflux lumen",
+      "isFavorite": false,
+      "id": 2
+    },
+    {
+      "name": "Jerome",
+      "image": "/assets/dalmation.png",
+      "description": "Interface Tasty Islands Inverse political",
+      "isFavorite": false,
+      "id": 5
+    },
+    {
+      "name": "Agustin",
+      "image": "/assets/blue-heeler.png",
+      "description": "Smith interface Keebler whinge portals mobile deposit",
+      "isFavorite": true,
+      "id": 6
+    },
+    {
+      "name": "Leola",
+      "image": "/assets/boxer.png",
+      "description": "boo Mouse replication fuga Loan woot Brand",
+      "isFavorite": false,
+      "id": 7
+    },
+    {
+      "name": "Missouri",
+      "image": "/assets/cowardly.png",
+      "description": "SUV Country connect Northeast light Recumbent South connect",
+      "isFavorite": false,
+      "id": 8
+    },
+    {
+      "name": "Jamarcus",
+      "image": "/assets/dalmation.png",
+      "description": "Assistant Southeast unexpectedly Moscovium Northwest Sports female",
+      "isFavorite": false,
+      "id": 9
+    },
+    {
+      "name": "Lorenzo",
       "image": "/assets/chihuahua.avif",
-      "description": "sit customized North hard honorable pariatur black",
+      "description": "Bedfordshire UTF8 East male artificial Borders female",
+      "isFavorite": false,
+      "id": 10
+    },
+    {
+      "name": "Gregory",
+      "image": "/assets/corgi.png",
+      "description": "Georgia South candela aw into religion quo",
       "isFavorite": false,
       "id": 11
     },
     {
-      "name": "Raquel",
+      "name": "Vickie",
       "image": "/assets/dalmation.png",
-      "description": "Card Ergonomic qua Chance transform keenly payment",
+      "description": "Chief synthesizing Illinois bypass Officer",
       "isFavorite": true,
+      "id": 12
+    },
+    {
+      "name": "Foster",
+      "image": "/assets/corgi.png",
+      "description": "Buckinghamshire extensible Music Rubidium Afghani application muss Southwest",
+      "isFavorite": true,
+      "id": 13
+    },
+    {
+      "name": "Mariam",
+      "image": "/assets/boxer.png",
+      "description": "Ruthenium Kia Northwest coherent comedy",
+      "isFavorite": false,
+      "id": 16
+    },
+    {
+      "name": "Kobe",
+      "image": "/assets/boxer.png",
+      "description": "friendly Music male Belgium Computer",
+      "isFavorite": true,
+      "id": 17
+    },
+    {
+      "name": "Jesus",
+      "image": "/assets/boxer.png",
+      "description": "indexing connect neural calculating Plastic Gasoline Hawaii",
+      "isFavorite": false,
+      "id": 18
+    },
+    {
+      "name": "Phoebe",
+      "image": "/assets/blue-heeler.png",
+      "description": "deposit success platforms Mountains indeed",
+      "isFavorite": false,
       "id": 19
     },
     {
-      "name": "Noah ",
-      "image": "/assets/dalmation.png",
-      "description": "the great",
-      "isFavorite": false,
-      "id": 33
-    },
-    {
-      "name": "Thinkific",
-      "image": "/assets/blue-heeler.png",
-      "description": "the platform dog",
-      "isFavorite": false,
-      "id": 34
-    },
-    {
-      "name": "Pretty damn sure",
-      "image": "/assets/boxer.jpeg",
-      "description": "it is working correctly finally",
-      "isFavorite": false,
-      "id": 35
-    },
-    {
-      "name": "new test last test",
-      "image": "/assets/blue-heeler.png",
-      "description": "for realz this timez",
-      "isFavorite": true,
-      "id": 37
-    },
-    {
-      "name": "doggo dog",
-      "image": "/assets/cowardly.png",
-      "description": "the dog ma nog",
-      "isFavorite": false,
-      "id": 40
-    },
-    {
-      "name": "Paco",
-      "image": "/assets/chihuahua.avif",
-      "description": "best doggo ever",
-      "isFavorite": false,
-      "id": 41
-    },
-    {
-      "name": "asdlfkjalsdf",
-      "image": "/assets/boxer.jpeg",
-      "description": "asdflasdkjflasdjf",
-      "isFavorite": true,
-      "id": 42
-    },
-    {
-      "name": "dog",
-      "image": "/assets/corgi.png",
-      "description": "dog",
-      "isFavorite": true,
-      "id": 44
-    },
-    {
-      "name": "nathan",
-      "image": "/assets/dalmation.png",
-      "description": "svedge",
-      "isFavorite": false,
-      "id": 46
-    },
-    {
       "name": "Jon Higger",
-      "image": "/assets/corgi.png",
+      "image": "/assets/chihuahua.avif",
       "description": "BARZ",
       "isFavorite": false,
-      "id": 47
+      "id": 20
     },
     {
-      "name": "adsf",
-      "image": "/assets/blue-heeler.png",
-      "description": "asfasdf",
-      "isFavorite": false,
-      "id": 48
-    },
-    {
-      "name": "Trouble",
+      "name": "Courage",
       "image": "/assets/cowardly.png",
-      "description": "the terrible doggo",
+      "description": "the Cowardly Dog",
       "isFavorite": false,
-      "id": 49
+      "id": 21
     },
     {
-      "name": "Testing Toast",
-      "image": "/assets/corgi.png",
-      "description": "is it toasted yet?",
+      "name": "tucker",
+      "image": "/assets/dalmation.png",
+      "description": "the white doggo",
       "isFavorite": false,
-      "id": 50
-    },
-    {
-      "name": "toast",
-      "image": "/assets/blue-heeler.png",
-      "description": "timer",
-      "isFavorite": false,
-      "id": 51
-    },
-    {
-      "name": "new",
-      "image": "/assets/blue-heeler.png",
-      "description": "test",
-      "isFavorite": false,
-      "id": 52
+      "id": 22
     }
   ]
 }

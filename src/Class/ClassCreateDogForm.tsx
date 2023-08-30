@@ -2,41 +2,39 @@ import { Component } from "react";
 import { dogPictures } from "../dog-pictures";
 import { Requests } from "../api";
 import { toast } from "react-hot-toast";
+import { Dog } from "../types";
 
-type State = {
+type FormState = {
   nameInput: string;
   imageInput: string;
   descriptionInput: string;
 };
 
-type Props = {
-  fetchData: () => void;
+type FormProps = {
   isLoading: boolean;
-  setIsLoading: (bool: boolean) => void;
+  loadingStateHandler: (apiCall: Promise<Dog>) => Promise<void>;
 };
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
-export class ClassCreateDogForm extends Component<Props, State> {
-  state: State = {
+export class ClassCreateDogForm extends Component<FormProps, FormState> {
+  state: FormState = {
     nameInput: "",
     imageInput: defaultSelectedImage,
     descriptionInput: "",
   };
 
+  newDog = {
+    name: this.state.nameInput,
+    image: this.state.imageInput,
+    description: this.state.descriptionInput,
+    isFavorite: false,
+  };
+
   handleSubmit = (e: React.FormEvent) => {
-    const { nameInput, imageInput, descriptionInput } = this.state;
-    const { setIsLoading, fetchData } = this.props;
     e.preventDefault();
-    setIsLoading(true);
-    Requests.postDog({
-      name: nameInput,
-      image: imageInput,
-      description: descriptionInput,
-      isFavorite: false,
-    })
-      .then(() => fetchData())
-      .then(() => toast.success("Dog Created"))
-      .finally(() => setIsLoading(false));
+    this.props
+      .loadingStateHandler(Requests.postDog(this.newDog))
+      .then(() => toast.success("Dog Created"));
 
     this.setState({
       nameInput: "",

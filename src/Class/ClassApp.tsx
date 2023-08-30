@@ -18,12 +18,15 @@ export class ClassApp extends Component<Record<string, never>, State> {
     isLoading: false,
   };
 
-  setDisplay = (newDisplay: Displays) => {
-    this.setState({ display: newDisplay });
+  loadingStateHandler = (apiCall: Promise<Dog>): Promise<void> => {
+    this.setState({ isLoading: true });
+    return apiCall
+      .then(() => this.fetchData())
+      .finally(() => this.setState({ isLoading: false }));
   };
 
-  setIsLoading = (bool: boolean) => {
-    this.setState({ isLoading: bool });
+  setDisplay = (newDisplay: Displays) => {
+    this.setState({ display: newDisplay });
   };
 
   fetchData = () => {
@@ -48,14 +51,13 @@ export class ClassApp extends Component<Record<string, never>, State> {
               display={display}
               fetchData={this.fetchData}
               isLoading={isLoading}
-              setIsLoading={this.setIsLoading}
+              loadingStateHandler={this.loadingStateHandler}
             />
           )}
           {display === "form" && (
             <ClassCreateDogForm
-              fetchData={this.fetchData}
               isLoading={isLoading}
-              setIsLoading={this.setIsLoading}
+              loadingStateHandler={this.loadingStateHandler}
             />
           )}
         </ClassSection>

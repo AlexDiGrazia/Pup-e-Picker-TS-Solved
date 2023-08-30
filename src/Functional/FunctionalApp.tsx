@@ -10,6 +10,11 @@ export function FunctionalApp() {
   const [allDogs, setAllDogs] = useState<Dog[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
+  const loadingStateHandler = (apiCall: Promise<Dog>): Promise<void> => {
+    setIsLoading(true);
+    return apiCall.then(() => fetchData()).finally(() => setIsLoading(false));
+  };
+
   const fetchData = () => Requests.getAllDogs().then(setAllDogs);
 
   return (
@@ -28,14 +33,13 @@ export function FunctionalApp() {
             display={display}
             fetchData={fetchData}
             isLoading={isLoading}
-            setIsLoading={setIsLoading}
+            loadingStateHandler={loadingStateHandler}
           />
         )}
         {display === "form" && (
           <FunctionalCreateDogForm
-            fetchData={fetchData}
             isLoading={isLoading}
-            setIsLoading={setIsLoading}
+            loadingStateHandler={loadingStateHandler}
           />
         )}
       </FunctionalSection>

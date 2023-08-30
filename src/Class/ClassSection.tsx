@@ -3,20 +3,28 @@ import { Component, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { Displays, Dog } from "../types";
 
-type Props = {
+type SectionProps = {
   children: ReactNode;
   allDogs: Dog[];
   display: string;
   setDisplay: (newDisplay: Displays) => void;
 };
 
-type State = {
-  isActive: { favorited: boolean; unFavorited: boolean; createDog: boolean };
+type SectionState = {
+  isActive: {
+    favorited: boolean;
+    unFavorited: boolean;
+    createDog: boolean;
+  };
 };
 
-export class ClassSection extends Component<Props, State> {
-  state: State = {
-    isActive: { favorited: false, unFavorited: false, createDog: false },
+export class ClassSection extends Component<SectionProps, SectionState> {
+  state: SectionState = {
+    isActive: {
+      favorited: false,
+      unFavorited: false,
+      createDog: false,
+    },
   };
 
   favorites = (dog: Dog) => dog.isFavorite === true;

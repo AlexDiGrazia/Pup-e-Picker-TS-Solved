@@ -3,30 +3,24 @@ import { Component } from "react";
 import { Requests } from "../api";
 import { Dog } from "../types";
 
-type Props = {
+type DogsProps = {
   allDogs: Dog[];
   display: "allDogs" | "favorites" | "unFavorites";
   fetchData: () => void;
   isLoading: boolean;
-  setIsLoading: (bool: boolean) => void;
+  loadingStateHandler: (apiCall: Promise<Dog>) => Promise<void>;
 };
 
-export class ClassDogs extends Component<Props> {
+export class ClassDogs extends Component<DogsProps> {
   toggleFavoriteStatus = (dog: Dog) => {
-    const { setIsLoading, fetchData } = this.props;
     const newStatus = dog.isFavorite === false ? true : false;
-    setIsLoading(true);
-    Requests.updateDog(dog.id, { isFavorite: newStatus })
-      .then(() => fetchData())
-      .finally(() => setIsLoading(false));
+    this.props.loadingStateHandler(
+      Requests.updateDog(dog.id, { isFavorite: newStatus })
+    );
   };
 
   deleteDog = (dog: Dog) => {
-    const { setIsLoading, fetchData } = this.props;
-    setIsLoading(true);
-    Requests.deleteDog(dog.id)
-      .then(() => fetchData())
-      .finally(() => setIsLoading(false));
+    this.props.loadingStateHandler(Requests.deleteDog(dog.id));
   };
 
   componentDidMount(): void {
