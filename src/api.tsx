@@ -31,6 +31,6 @@ export const Requests = {
 
   // Just a dummy function for use in the playground
   dummyFunction: (data: Dog[]) => {
-    console.log(data);
+    return data;
   },
 };

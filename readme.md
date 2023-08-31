@@ -41,27 +41,27 @@ To get this project setup, you should:
 ## Standard Requirements
 
 - [x] Setup eslint
-- [] Pass all linting checks
+- [x] Pass all linting checks
 
 - To check if linting passes, run `npm run lint`
 
 - [x] Format code with prettier
-- [] State should not be duplicated
-- [] Variables should be named logically
-- [] No unnecessary console logs
-- [] No commented out blocks of code (Code comments are fine)
+- [x] State should not be duplicated
+- [x] Variables should be named logically
+- [x] No unnecessary console logs
+- [x] No commented out blocks of code (Code comments are fine)
 - [x] Setup a github repository with your submission as the `main` branch, you will submit a link to this for grading (NOT A ZIP FILE)
 
 ## Typescript Specific Requirements
 
-- [] pass **ALL** type checks
+- [x] pass **ALL** type checks
   - Check by running `npm run typecheck`
-- [] DON'T USE `any`.... OR ELSE
-- [] Keep your types clean and in a logical location
-- [] Prop Types for components should be collocated with their components
-- [] Shared types should live in a file that says `types` somewhere in it's name
-  - [] example: `types.ts` should work fine
-- [] Unshared types should live in the component they are used in
+- [x] DON'T USE `any`.... OR ELSE
+- [x] Keep your types clean and in a logical location
+- [x] Prop Types for components should be collocated with their components
+- [x] Shared types should live in a file that says `types` somewhere in it's name
+  - [x] example: `types.ts` should work fine
+- [x] Unshared types should live in the component they are used in
 
 ## Example Of Correct Code
 
