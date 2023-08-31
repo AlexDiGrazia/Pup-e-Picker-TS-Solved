@@ -23,24 +23,28 @@ export class ClassCreateDogForm extends Component<FormProps, FormState> {
     descriptionInput: "",
   };
 
-  newDog = {
-    name: this.state.nameInput,
-    image: this.state.imageInput,
-    description: this.state.descriptionInput,
-    isFavorite: false,
+  newDog = () => {
+    const newDog = {
+      name: this.state.nameInput,
+      image: this.state.imageInput,
+      description: this.state.descriptionInput,
+      isFavorite: false,
+    };
+    return newDog;
   };
 
   handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     this.props
-      .loadingStateHandler(Requests.postDog(this.newDog))
-      .then(() => toast.success("Dog Created"));
-
-    this.setState({
-      nameInput: "",
-      imageInput: defaultSelectedImage,
-      descriptionInput: "",
-    });
+      .loadingStateHandler(Requests.postDog(this.newDog()))
+      .then(() => toast.success("Dog Created"))
+      .then(() => {
+        this.setState({
+          nameInput: "",
+          imageInput: defaultSelectedImage,
+          descriptionInput: "",
+        });
+      });
   };
   render() {
     const { nameInput, imageInput, descriptionInput } = this.state;

@@ -4,7 +4,7 @@ import { Dog } from "../types";
 import { Requests } from "../api";
 
 type DogsProps = {
-  display: "allDogs" | "favorites" | "unFavorites";
+  display: "allDogs" | "favorited" | "unFavorited";
   allDogs: Dog[];
   fetchData: () => void;
   isLoading: boolean;
@@ -33,8 +33,8 @@ export const FunctionalDogs = ({
 
   const filterCB = {
     allDogs: (dog: Dog) => dog,
-    favorites: (dog: Dog) => dog.isFavorite === true,
-    unFavorites: (dog: Dog) => dog.isFavorite === false,
+    favorited: (dog: Dog) => dog.isFavorite === true,
+    unFavorited: (dog: Dog) => dog.isFavorite === false,
   };
 
   return (

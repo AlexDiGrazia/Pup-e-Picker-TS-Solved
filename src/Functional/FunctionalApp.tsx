@@ -27,7 +27,7 @@ export function FunctionalApp() {
         display={display}
         setDisplay={setDisplay}
       >
-        {display !== "form" && (
+        {display !== "createDog" && (
           <FunctionalDogs
             allDogs={allDogs}
             display={display}
@@ -36,7 +36,7 @@ export function FunctionalApp() {
             loadingStateHandler={loadingStateHandler}
           />
         )}
-        {display === "form" && (
+        {display === "createDog" && (
           <FunctionalCreateDogForm
             isLoading={isLoading}
             loadingStateHandler={loadingStateHandler}

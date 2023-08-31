@@ -28,13 +28,13 @@ export const FunctionalCreateDogForm = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    loadingStateHandler(Requests.postDog(newDog)).then(() =>
-      toast.success("Dog Created")
-    );
-
-    setNameInput("");
-    setDescriptionInput("");
-    setImageInput(defaultSelectedImage);
+    loadingStateHandler(Requests.postDog(newDog))
+      .then(() => toast.success("Dog Created"))
+      .then(() => {
+        setNameInput("");
+        setDescriptionInput("");
+        setImageInput(defaultSelectedImage);
+      });
   };
 
   return (

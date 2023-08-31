@@ -25,12 +25,12 @@ export class ClassApp extends Component<Record<string, never>, State> {
       .finally(() => this.setState({ isLoading: false }));
   };
 
-  setDisplay = (newDisplay: Displays) => {
-    this.setState({ display: newDisplay });
-  };
-
   fetchData = () => {
     Requests.getAllDogs().then((data) => this.setState({ allDogs: data }));
+  };
+
+  setDisplay = (newDisplay: Displays) => {
+    this.setState({ display: newDisplay });
   };
 
   render() {
@@ -45,7 +45,7 @@ export class ClassApp extends Component<Record<string, never>, State> {
           display={display}
           setDisplay={this.setDisplay}
         >
-          {display !== "form" && (
+          {display !== "createDog" && (
             <ClassDogs
               allDogs={allDogs}
               display={display}
@@ -54,7 +54,7 @@ export class ClassApp extends Component<Record<string, never>, State> {
               loadingStateHandler={this.loadingStateHandler}
             />
           )}
-          {display === "form" && (
+          {display === "createDog" && (
             <ClassCreateDogForm
               isLoading={isLoading}
               loadingStateHandler={this.loadingStateHandler}

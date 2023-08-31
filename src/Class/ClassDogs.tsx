@@ -5,7 +5,7 @@ import { Dog } from "../types";
 
 type DogsProps = {
   allDogs: Dog[];
-  display: "allDogs" | "favorites" | "unFavorites";
+  display: "allDogs" | "favorited" | "unFavorited";
   fetchData: () => void;
   isLoading: boolean;
   loadingStateHandler: (apiCall: Promise<Dog>) => Promise<void>;
@@ -29,8 +29,8 @@ export class ClassDogs extends Component<DogsProps> {
 
   filterCB = {
     allDogs: (dog: Dog) => dog,
-    favorites: (dog: Dog) => dog.isFavorite === true,
-    unFavorites: (dog: Dog) => dog.isFavorite === false,
+    favorited: (dog: Dog) => dog.isFavorite === true,
+    unFavorited: (dog: Dog) => dog.isFavorite === false,
   };
 
   render() {

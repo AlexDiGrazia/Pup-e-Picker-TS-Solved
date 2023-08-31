@@ -8,13 +8,6 @@
       "id": 1
     },
     {
-      "name": "David",
-      "image": "/assets/boxer.png",
-      "description": "behind Metal science East to Demiflux lumen",
-      "isFavorite": false,
-      "id": 2
-    },
-    {
       "name": "Jerome",
       "image": "/assets/dalmation.png",
       "description": "Interface Tasty Islands Inverse political",
@@ -25,21 +18,21 @@
       "name": "Agustin",
       "image": "/assets/blue-heeler.png",
       "description": "Smith interface Keebler whinge portals mobile deposit",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 6
     },
     {
       "name": "Leola",
       "image": "/assets/boxer.png",
       "description": "boo Mouse replication fuga Loan woot Brand",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 7
     },
     {
       "name": "Missouri",
       "image": "/assets/cowardly.png",
       "description": "SUV Country connect Northeast light Recumbent South connect",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 8
     },
     {
@@ -64,13 +57,6 @@
       "id": 11
     },
     {
-      "name": "Vickie",
-      "image": "/assets/dalmation.png",
-      "description": "Chief synthesizing Illinois bypass Officer",
-      "isFavorite": true,
-      "id": 12
-    },
-    {
       "name": "Foster",
       "image": "/assets/corgi.png",
       "description": "Buckinghamshire extensible Music Rubidium Afghani application muss Southwest",
@@ -81,7 +67,7 @@
       "name": "Mariam",
       "image": "/assets/boxer.png",
       "description": "Ruthenium Kia Northwest coherent comedy",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 16
     },
     {
@@ -102,7 +88,7 @@
       "name": "Phoebe",
       "image": "/assets/blue-heeler.png",
       "description": "deposit success platforms Mountains indeed",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 19
     },
     {
@@ -123,8 +109,106 @@
       "name": "tucker",
       "image": "/assets/dalmation.png",
       "description": "the white doggo",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 22
+    },
+    {
+      "name": "Tyrece",
+      "image": "/assets/boxer.jpeg",
+      "description": "Tyrece Williams",
+      "isFavorite": false,
+      "id": 23
+    },
+    {
+      "name": "Terence",
+      "image": "/assets/boxer.jpeg",
+      "description": "The PitBull mix",
+      "isFavorite": false,
+      "id": 24
+    },
+    {
+      "name": "Krusty the Clown",
+      "image": "/assets/dalmation.png",
+      "description": "Most famous Simpson's doggo",
+      "isFavorite": false,
+      "id": 25
+    },
+    {
+      "name": "Mike Tyson",
+      "image": "/assets/boxer.jpeg",
+      "description": "Thith ith my favorite dog that ever wath",
+      "isFavorite": true,
+      "id": 26
+    },
+    {
+      "name": "Velociraptor",
+      "image": "/assets/chihuahua.avif",
+      "description": "the pretty Poodle",
+      "isFavorite": false,
+      "id": 27
+    },
+    {
+      "name": "Air Jordan",
+      "image": "/assets/boxer.jpeg",
+      "description": "Pupper extraordinare ",
+      "isFavorite": true,
+      "id": 28
+    },
+    {
+      "name": "Laurice",
+      "image": "/assets/chihuahua.avif",
+      "description": "the fab doggo",
+      "isFavorite": false,
+      "id": 29
+    },
+    {
+      "name": "frank",
+      "image": "/assets/boxer.jpeg",
+      "description": "the hot dog",
+      "isFavorite": false,
+      "id": 30
+    },
+    {
+      "name": "Zak Bay",
+      "image": "/assets/blue-heeler.png",
+      "description": "the coding dogg",
+      "isFavorite": false,
+      "id": 31
+    },
+    {
+      "name": "Lucky",
+      "image": "/assets/blue-heeler.png",
+      "description": "the one hundred and first dalmation",
+      "isFavorite": false,
+      "id": 32
+    },
+    {
+      "name": "James",
+      "image": "/assets/blue-heeler.png",
+      "description": "the hauser schnitzel",
+      "isFavorite": false,
+      "id": 33
+    },
+    {
+      "name": "Amanda",
+      "image": "/assets/chihuahua.avif",
+      "description": "the boston terrior",
+      "isFavorite": false,
+      "id": 34
+    },
+    {
+      "name": "Andrew",
+      "image": "/assets/boxer.jpeg",
+      "description": "big dogg",
+      "isFavorite": false,
+      "id": 35
+    },
+    {
+      "name": "Tyson Judd",
+      "image": "/assets/blue-heeler.png",
+      "description": "aerospace dogg",
+      "isFavorite": false,
+      "id": 36
     }
   ]
 }

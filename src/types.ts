@@ -1,5 +1,5 @@
 // Add your own custom types in here
-export type Displays = "allDogs" | "favorites" | "unFavorites" | "form";
+export type Displays = "allDogs" | "favorited" | "unFavorited" | "createDog";
 
 export type Dog = {
   id: number;
