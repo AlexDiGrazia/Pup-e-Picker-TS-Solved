@@ -8,20 +8,6 @@
       "id": 1
     },
     {
-      "name": "Jerome",
-      "image": "/assets/dalmation.png",
-      "description": "Interface Tasty Islands Inverse political",
-      "isFavorite": false,
-      "id": 5
-    },
-    {
-      "name": "Agustin",
-      "image": "/assets/blue-heeler.png",
-      "description": "Smith interface Keebler whinge portals mobile deposit",
-      "isFavorite": false,
-      "id": 6
-    },
-    {
       "name": "Leola",
       "image": "/assets/boxer.png",
       "description": "boo Mouse replication fuga Loan woot Brand",
@@ -32,7 +18,7 @@
       "name": "Missouri",
       "image": "/assets/cowardly.png",
       "description": "SUV Country connect Northeast light Recumbent South connect",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 8
     },
     {
@@ -53,7 +39,7 @@
       "name": "Gregory",
       "image": "/assets/corgi.png",
       "description": "Georgia South candela aw into religion quo",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 11
     },
     {
@@ -78,25 +64,11 @@
       "id": 17
     },
     {
-      "name": "Jesus",
-      "image": "/assets/boxer.png",
-      "description": "indexing connect neural calculating Plastic Gasoline Hawaii",
-      "isFavorite": false,
-      "id": 18
-    },
-    {
       "name": "Phoebe",
       "image": "/assets/blue-heeler.png",
       "description": "deposit success platforms Mountains indeed",
       "isFavorite": true,
       "id": 19
-    },
-    {
-      "name": "Jon Higger",
-      "image": "/assets/chihuahua.avif",
-      "description": "BARZ",
-      "isFavorite": false,
-      "id": 20
     },
     {
       "name": "Courage",

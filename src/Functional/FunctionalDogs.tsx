@@ -39,7 +39,7 @@ export const FunctionalDogs = ({
 
   return (
     <>
-      {allDogs.filter(filterCB[display]).map((dog: Dog) => (
+      {allDogs.filter(filterCB[display]).map((dog) => (
         <DogCard
           dog={{ ...dog }}
           key={dog.id}
