@@ -8,20 +8,6 @@
       "id": 1
     },
     {
-      "name": "Leola",
-      "image": "/assets/boxer.png",
-      "description": "boo Mouse replication fuga Loan woot Brand",
-      "isFavorite": true,
-      "id": 7
-    },
-    {
-      "name": "Missouri",
-      "image": "/assets/cowardly.png",
-      "description": "SUV Country connect Northeast light Recumbent South connect",
-      "isFavorite": false,
-      "id": 8
-    },
-    {
       "name": "Jamarcus",
       "image": "/assets/dalmation.png",
       "description": "Assistant Southeast unexpectedly Moscovium Northwest Sports female",
@@ -36,45 +22,38 @@
       "id": 10
     },
     {
-      "name": "Gregory",
-      "image": "/assets/corgi.png",
-      "description": "Georgia South candela aw into religion quo",
-      "isFavorite": true,
-      "id": 11
-    },
-    {
       "name": "Foster",
       "image": "/assets/corgi.png",
       "description": "Buckinghamshire extensible Music Rubidium Afghani application muss Southwest",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 13
     },
     {
       "name": "Mariam",
       "image": "/assets/boxer.png",
       "description": "Ruthenium Kia Northwest coherent comedy",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 16
     },
     {
       "name": "Kobe",
       "image": "/assets/boxer.png",
       "description": "friendly Music male Belgium Computer",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 17
     },
     {
       "name": "Phoebe",
       "image": "/assets/blue-heeler.png",
       "description": "deposit success platforms Mountains indeed",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 19
     },
     {
       "name": "Courage",
       "image": "/assets/cowardly.png",
       "description": "the Cowardly Dog",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 21
     },
     {
@@ -88,21 +67,21 @@
       "name": "Tyrece",
       "image": "/assets/boxer.jpeg",
       "description": "Tyrece Williams",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 23
     },
     {
       "name": "Terence",
       "image": "/assets/boxer.jpeg",
       "description": "The PitBull mix",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 24
     },
     {
       "name": "Krusty the Clown",
       "image": "/assets/dalmation.png",
       "description": "Most famous Simpson's doggo",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 25
     },
     {
@@ -116,7 +95,7 @@
       "name": "Velociraptor",
       "image": "/assets/chihuahua.avif",
       "description": "the pretty Poodle",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 27
     },
     {
@@ -130,57 +109,71 @@
       "name": "Laurice",
       "image": "/assets/chihuahua.avif",
       "description": "the fab doggo",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 29
     },
     {
       "name": "frank",
       "image": "/assets/boxer.jpeg",
       "description": "the hot dog",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 30
     },
     {
       "name": "Zak Bay",
       "image": "/assets/blue-heeler.png",
       "description": "the coding dogg",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 31
     },
     {
       "name": "Lucky",
       "image": "/assets/blue-heeler.png",
       "description": "the one hundred and first dalmation",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 32
     },
     {
       "name": "James",
       "image": "/assets/blue-heeler.png",
       "description": "the hauser schnitzel",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 33
     },
     {
       "name": "Amanda",
       "image": "/assets/chihuahua.avif",
       "description": "the boston terrior",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 34
     },
     {
       "name": "Andrew",
       "image": "/assets/boxer.jpeg",
       "description": "big dogg",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 35
     },
     {
       "name": "Tyson Judd",
       "image": "/assets/blue-heeler.png",
       "description": "aerospace dogg",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 36
+    },
+    {
+      "name": "Godzilla",
+      "image": "/assets/chihuahua.avif",
+      "description": "Big tall scary doggo destroyer of worlds",
+      "isFavorite": true,
+      "id": 37
+    },
+    {
+      "name": "Willy Wonka",
+      "image": "/assets/cowardly.png",
+      "description": "Most magnificent doggo of the all",
+      "isFavorite": true,
+      "id": 38
     }
   ]
 }

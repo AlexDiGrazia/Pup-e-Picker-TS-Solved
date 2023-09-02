@@ -1,34 +1,24 @@
-import { Dispatch, ReactNode, SetStateAction, useState } from "react";
+import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { Displays, Dog } from "../types";
+import { Displays } from "../types";
 import { SectionButton } from "../SectionButton";
-import { sectionButtonsArray } from "../sectionButtonsArray";
-
-export type isActive = {
-  favorited: boolean;
-  unFavorited: boolean;
-  createDog: boolean;
-};
 
 type SectionProps = {
   children: ReactNode;
-  allDogs: Dog[];
   display: string;
-  setDisplay: Dispatch<SetStateAction<Displays>>;
+  toggleDisplay: (display: Displays) => void;
+  total: {
+    favorites: number;
+    unFavorites: number;
+  };
 };
 
 export const FunctionalSection = ({
   children,
-  allDogs,
   display,
-  setDisplay,
+  toggleDisplay,
+  total,
 }: SectionProps) => {
-  const [isActive, setIsActive] = useState<isActive>({
-    favorited: false,
-    unFavorited: false,
-    createDog: false,
-  });
-
   return (
     <section id="main-section">
       <div className="container-header">
@@ -37,18 +27,21 @@ export const FunctionalSection = ({
           Change to Class
         </Link>
         <div className="selectors">
-          {sectionButtonsArray.map((obj) => (
-            <SectionButton
-              isActive={isActive[obj.collection]}
-              setIsActive={setIsActive}
-              display={display}
-              setDisplay={setDisplay}
-              collection={obj.collection}
-              hasTotal={obj.hasTotal}
-              allDogs={allDogs}
-              filter={obj.filter}
-            />
-          ))}
+          <SectionButton
+            isActive={display === "favorited"}
+            onClick={() => toggleDisplay("favorited")}
+            label={`favorited ( ${total.favorites} )`}
+          />
+          <SectionButton
+            isActive={display === "unFavorited"}
+            onClick={() => toggleDisplay("unFavorited")}
+            label={`unfavorited ( ${total.unFavorites} )`}
+          />
+          <SectionButton
+            isActive={display === "createDog"}
+            onClick={() => toggleDisplay("createDog")}
+            label={"create dog"}
+          />
         </div>
       </div>
       <div className="content-container">{children}</div>

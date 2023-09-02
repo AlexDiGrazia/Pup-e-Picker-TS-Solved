@@ -1,54 +1,32 @@
 import { DogCard } from "../Shared/DogCard";
 import { Component } from "react";
-import { Requests } from "../api";
 import { Dog } from "../types";
 
 type DogsProps = {
-  allDogs: Dog[];
-  display: "allDogs" | "favorited" | "unFavorited";
-  fetchData: () => void;
+  collection: Dog[];
+  deleteDog: (dog: Dog) => void;
+  toggleFavoriteStatus: (dog: Dog) => void;
   isLoading: boolean;
-  loadingStateHandler: (apiCall: Promise<Dog>) => Promise<void>;
 };
 
 export class ClassDogs extends Component<DogsProps> {
-  toggleFavoriteStatus = (dog: Dog) => {
-    const newStatus = dog.isFavorite === false ? true : false;
-    this.props.loadingStateHandler(
-      Requests.updateDog(dog.id, { isFavorite: newStatus })
-    );
-  };
-
-  deleteDog = (dog: Dog) => {
-    this.props.loadingStateHandler(Requests.deleteDog(dog.id));
-  };
-
-  componentDidMount(): void {
-    this.props.fetchData();
-  }
-
-  filterCB = {
-    allDogs: (dog: Dog) => dog,
-    favorited: (dog: Dog) => dog.isFavorite === true,
-    unFavorited: (dog: Dog) => dog.isFavorite === false,
-  };
-
   render() {
-    const { display, allDogs, isLoading } = this.props;
+    const { collection, isLoading, deleteDog, toggleFavoriteStatus } =
+      this.props;
     return (
       <>
-        {allDogs.filter(this.filterCB[display]).map((dog: Dog) => (
+        {collection.map((dog) => (
           <DogCard
             dog={{ ...dog }}
             key={dog.id}
             onTrashIconClick={() => {
-              this.deleteDog(dog);
+              deleteDog(dog);
             }}
             onHeartClick={() => {
-              this.toggleFavoriteStatus(dog);
+              toggleFavoriteStatus(dog);
             }}
             onEmptyHeartClick={() => {
-              this.toggleFavoriteStatus(dog);
+              toggleFavoriteStatus(dog);
             }}
             isLoading={isLoading}
           />

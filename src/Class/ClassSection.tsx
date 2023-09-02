@@ -1,42 +1,21 @@
-// you can use `ReactNode` to add a type to the children prop
 import { Component, ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { Displays, Dog } from "../types";
-import { sectionButtonsArray } from "../sectionButtonsArray";
+import { Displays } from "../types";
 import { SectionButton } from "../SectionButton";
-import { isActive } from "../Functional/FunctionalSection";
 
 type SectionProps = {
   children: ReactNode;
-  allDogs: Dog[];
   display: string;
-  setDisplay: (newDisplay: Displays) => void;
-};
-
-type SectionState = {
-  isActive: {
-    favorited: boolean;
-    unFavorited: boolean;
-    createDog: boolean;
+  toggleDisplay: (display: Displays) => void;
+  total: {
+    favorites: number;
+    unFavorites: number;
   };
 };
 
-export class ClassSection extends Component<SectionProps, SectionState> {
-  state: SectionState = {
-    isActive: {
-      favorited: false,
-      unFavorited: false,
-      createDog: false,
-    },
-  };
-
-  setIsActive = (isActive: isActive) => {
-    this.setState({ isActive });
-  };
-
+export class ClassSection extends Component<SectionProps> {
   render() {
-    const { isActive } = this.state;
-    const { display, setDisplay, allDogs } = this.props;
+    const { display, toggleDisplay, total } = this.props;
     return (
       <section id="main-section">
         <div className="container-header">
@@ -47,18 +26,21 @@ export class ClassSection extends Component<SectionProps, SectionState> {
           </Link>
 
           <div className="selectors">
-            {sectionButtonsArray.map((obj) => (
-              <SectionButton
-                isActive={isActive[obj.collection]}
-                setIsActive={this.setIsActive}
-                display={display}
-                setDisplay={setDisplay}
-                collection={obj.collection}
-                hasTotal={obj.hasTotal}
-                allDogs={allDogs}
-                filter={obj.filter}
-              />
-            ))}
+            <SectionButton
+              isActive={display === "favorited"}
+              onClick={() => toggleDisplay("favorited")}
+              label={`favorited ( ${total.favorites} )`}
+            />
+            <SectionButton
+              isActive={display === "unFavorited"}
+              onClick={() => toggleDisplay("unFavorited")}
+              label={`unfavorited ( ${total.unFavorites} )`}
+            />
+            <SectionButton
+              isActive={display === "createDog"}
+              onClick={() => toggleDisplay("createDog")}
+              label={"create dog"}
+            />
           </div>
         </div>
         <div className="content-container">{this.props.children}</div>
