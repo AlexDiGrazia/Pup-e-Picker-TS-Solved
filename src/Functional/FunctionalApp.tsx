@@ -31,19 +31,18 @@ export function FunctionalApp() {
     loadingStateHandler(Requests.deleteDog(dog.id));
   };
 
+  const createDog = (newDog: Omit<Dog, "id">) =>
+    loadingStateHandler(Requests.postDog(newDog));
+
   useEffect(() => {
     fetchData();
   }, []);
 
-  const filterCB = {
-    allDogs: (dog: Dog) => dog,
-    favorited: (dog: Dog) => dog.isFavorite === true,
-    unFavorited: (dog: Dog) => dog.isFavorite === false,
-    createDog: (dog: Dog) => dog,
+  const collection = {
+    allDogs,
+    favorited: allDogs.filter((dog: Dog) => dog.isFavorite === true),
+    unFavorited: allDogs.filter((dog: Dog) => dog.isFavorite === false),
   };
-  const collection = allDogs.filter(filterCB[display]);
-  const favorites = allDogs.filter(filterCB.favorited).length;
-  const unFavorites = allDogs.filter(filterCB.unFavorited).length;
 
   return (
     <div className="App" style={{ backgroundColor: "skyblue" }}>
@@ -54,13 +53,13 @@ export function FunctionalApp() {
         display={display}
         toggleDisplay={toggleDisplay}
         total={{
-          favorites,
-          unFavorites,
+          favorites: collection.favorited.length,
+          unFavorites: collection.unFavorited.length,
         }}
       >
         {display !== "createDog" && (
           <FunctionalDogs
-            collection={collection}
+            collection={collection[display]}
             deleteDog={deleteDog}
             toggleFavoriteStatus={toggleFavoriteStatus}
             isLoading={isLoading}
@@ -68,8 +67,8 @@ export function FunctionalApp() {
         )}
         {display === "createDog" && (
           <FunctionalCreateDogForm
+            createDog={createDog}
             isLoading={isLoading}
-            loadingStateHandler={loadingStateHandler}
           />
         )}
       </FunctionalSection>

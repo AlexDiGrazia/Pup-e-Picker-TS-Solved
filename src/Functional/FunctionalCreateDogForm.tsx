@@ -1,19 +1,18 @@
 import { useState } from "react";
 import { dogPictures } from "../dog-pictures";
-import { Requests } from "../api";
-import { toast } from "react-hot-toast";
 import { Dog } from "../types";
+import { toast } from "react-hot-toast";
 
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
 type FormProps = {
+  createDog: (newDog: Omit<Dog, "id">) => Promise<void>;
   isLoading: boolean;
-  loadingStateHandler: (apiCall: Promise<Dog>) => Promise<void>;
 };
 
 export const FunctionalCreateDogForm = ({
+  createDog,
   isLoading,
-  loadingStateHandler,
 }: FormProps) => {
   const [nameInput, setNameInput] = useState<string>("");
   const [descriptionInput, setDescriptionInput] = useState<string>("");
@@ -28,7 +27,7 @@ export const FunctionalCreateDogForm = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    loadingStateHandler(Requests.postDog(newDog))
+    createDog(newDog)
       .then(() => toast.success("Dog Created"))
       .then(() => {
         setNameInput("");

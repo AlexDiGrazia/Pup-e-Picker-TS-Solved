@@ -1,13 +1,6 @@
 {
   "dogs": [
     {
-      "name": "Alivia",
-      "image": "/assets/cowardly.png",
-      "description": "Rustic than Facilitator Smart Chair cyan Forward pascal",
-      "isFavorite": false,
-      "id": 1
-    },
-    {
       "name": "Jamarcus",
       "image": "/assets/dalmation.png",
       "description": "Assistant Southeast unexpectedly Moscovium Northwest Sports female",
@@ -32,21 +25,21 @@
       "name": "Mariam",
       "image": "/assets/boxer.png",
       "description": "Ruthenium Kia Northwest coherent comedy",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 16
     },
     {
       "name": "Kobe",
       "image": "/assets/boxer.png",
       "description": "friendly Music male Belgium Computer",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 17
     },
     {
       "name": "Phoebe",
       "image": "/assets/blue-heeler.png",
       "description": "deposit success platforms Mountains indeed",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 19
     },
     {
@@ -60,14 +53,14 @@
       "name": "tucker",
       "image": "/assets/dalmation.png",
       "description": "the white doggo",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 22
     },
     {
       "name": "Tyrece",
       "image": "/assets/boxer.jpeg",
       "description": "Tyrece Williams",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 23
     },
     {
@@ -81,49 +74,49 @@
       "name": "Krusty the Clown",
       "image": "/assets/dalmation.png",
       "description": "Most famous Simpson's doggo",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 25
     },
     {
       "name": "Mike Tyson",
       "image": "/assets/boxer.jpeg",
       "description": "Thith ith my favorite dog that ever wath",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 26
     },
     {
       "name": "Velociraptor",
       "image": "/assets/chihuahua.avif",
       "description": "the pretty Poodle",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 27
     },
     {
       "name": "Air Jordan",
       "image": "/assets/boxer.jpeg",
       "description": "Pupper extraordinare ",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 28
     },
     {
       "name": "Laurice",
       "image": "/assets/chihuahua.avif",
       "description": "the fab doggo",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 29
     },
     {
       "name": "frank",
       "image": "/assets/boxer.jpeg",
       "description": "the hot dog",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 30
     },
     {
       "name": "Zak Bay",
       "image": "/assets/blue-heeler.png",
       "description": "the coding dogg",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 31
     },
     {
@@ -174,6 +167,13 @@
       "description": "Most magnificent doggo of the all",
       "isFavorite": true,
       "id": 38
+    },
+    {
+      "name": "Steve-O",
+      "image": "/assets/cowardly.png",
+      "description": "Crazy stunt doggie ",
+      "isFavorite": false,
+      "id": 39
     }
   ]
 }
